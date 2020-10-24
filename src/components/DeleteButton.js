@@ -26,6 +26,9 @@ function DeleteButton({ postId, commentId, callback }) {
     variables: {
       postId,
       commentId
+    },
+    onError(err) {
+     console.log(err)
     }
   });
   return (
