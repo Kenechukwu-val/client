@@ -20,7 +20,10 @@ function PostForm() {
       data.getPosts = [result.data.createPost, ...data.getPosts];
       proxy.writeQuery({ query: FETCH_POSTS_QUERY, data });
       values.body = '';
-    }
+    },
+     onError(err) {
+      console.log(err)
+     }
   });
 
   function createPostCallback() {
